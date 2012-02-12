@@ -1,3 +1,44 @@
-Wildlife is a python script which reads Jenkins Tests files 
+Wildlife is a python script which reads the results of Jenkins Tests result files from various Projects and Jobs 
+and then updates a single google spreadsheet with the results. The advvantage is that you can see all error from 
+various jobs and projects in one place and use use the advantages spreadsheets provide: sorting, adding notes
+etc.
+
+The google spreadsheet that you intend to update must have the columns:
+1. TestGrouping - This is the name of the Jenkins job
+2. Project - This is the name of project within the job
+3. TestSuite - The name of the test suite of the failure
+4. Test - The name of the failing test
+5. Failure - This will contain the first lines of the exception
+from the test failure
+6. Responsible - The person on your team responsible for the test.
+7. Note - Additional notes for the failure
+
+In order to run this script you need the following installed:
+1.Python 2.7
+2.The Google Docs python APIs, version 2.0.16.  Available here:
+http://code.google.com/p/gdata-python-client/
+Follow the installation instructions to install the google python apis.
+3. A configuration file (named config.xml) which contains
+* Your google credentials
+* The mappings between jobs as they are named in Jenkins and how 
+they are named in your spreadsheet
+* The mappings between how your project are named in Jenkins and how you wish
+them to appear in the spreadsheet. 
+
+It is a good idea to fill these out as it makes you spreadsheet easier to read,
+
+Please see the example configuration file in the project.
+
+Note: There are further configuration options possible.  Check 
+the help (by using the standard -h python option).
+
+Caveats
+1. Before the script is run no row can be locked. This is a google quirk.
+2. When the new failures are added as new rows, the will follow the same text 
+format as the top row. This is a google quirk.
+
+
+References:
+1.  Google Python APIs: http://code.google.com/apis/spreadsheets/data/1.0/developers_guide_python.html
 
 Author Alex Staveley, Feb 2012. Email: breako@gmail.com

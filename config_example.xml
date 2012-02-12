@@ -1,0 +1,28 @@
+<configdata>
+	<!--  This is an example configuration.  When you have specified your configuration, make sure this
+			filename is named config.xml -->
+	<googlecredentials>
+		<name>myemail@gmail.com</name>
+		<password>mypassword</password>
+	</googlecredentials>
+	<build>
+		<!--  The build name should match the name of your worksheet. -->
+		<name>Trunk</name>  
+		<jobs>
+			<mapping>
+				<jenkinsname>MyJenkinsProject</jenkinsname>
+				<spreadsheetname>Dev Project</spreadsheetname>
+			</mapping>
+		</jobs>
+	</build>
+	<projects>
+		<project>
+			<jenkinsname>com.dublintech$Persistence</jenkinsname>
+			<spreadsheetname>Persistence</spreadsheetname>
+		</project>
+		<project>
+			<jenkinsname>com.dublintech$Webservices</jenkinsname>
+			<spreadsheetname>Webservices</spreadsheetname>
+		</project>
+	</projects>
+</configdata>

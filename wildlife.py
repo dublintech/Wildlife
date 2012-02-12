@@ -10,8 +10,6 @@ Created on 1 Feb 2012
 # Author:      Alex Staveley
 #
 # Created:     20/01/2012
-# Copyright:   (c) Alex 2012
-# Licence:     <your licence>
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
